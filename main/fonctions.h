@@ -1,0 +1,16 @@
+donnee initDonnee(void);
+donnee getDonnee(chaine nomFichier, int* ligne, int nombreLigneValidees);
+void getNomFichier(chaine* nomFichier, chaine nom_table, chaine nom_colonne);
+void convertiVersChaine(donnee d, chaine c, int i);
+void ajouteLigneValidee(int** ancienneListe, int nouvelleLigne, int nombreLignesValidees);
+int* trouveLigneViaCondition(chaine condition, chaine nom_table, chaine nom_colonne, int* ligneValides);
+void recupereToutesLignes(int** ligne, int* lignesValides, chaine nom_table, chaine nom_colonne);
+void insertDonnee(chaine table, chaine nom_colonne, chaine info);
+void createTable(chaine nomTable, chaine* nomColonne, chaine* types, int nombreColonne);
+void updateDonnee(chaine nomTable, chaine nom_colonne, chaine infoAChanger, chaine infoModif, chaine nom_colonne_condition);
+void updateDonneeSansConditions(chaine nomTable, chaine nom_colonne, chaine infoModif);
+int determineTailleMax(reponseSQL reponse);
+void afficheTableau(reponseSQL reponse, chaine nom_table, chaine nom_colonne);
+void AfficheSeparateur(chaine nom_table, reponseSQL reponse, chaine nomColonne);
+void delete(chaine nomTable, chaine nomColonne, chaine condition, int *tableau);
+void appelleDelete(chaine condition, chaine nomTable, chaine nomColonne);
